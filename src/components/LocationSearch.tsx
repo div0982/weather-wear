@@ -47,7 +47,7 @@ export const LocationSearch = ({ onLocationSelect, initialLocation }: LocationSe
 
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/search.json?key=d64827ead6394124a69185103252402&q=${encodeURIComponent(query)}`
+        `https://api.weatherapi.com/v1/search.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${encodeURIComponent(query)}`
       );
 
       if (!response.ok) throw new Error("Failed to fetch location suggestions");
@@ -65,7 +65,7 @@ export const LocationSearch = ({ onLocationSelect, initialLocation }: LocationSe
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/search.json?key=d64827ead6394124a69185103252402&q=${encodeURIComponent(query)}`
+        `https://api.weatherapi.com/v1/search.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${encodeURIComponent(query)}`
       );
 
       if (!response.ok) throw new Error("Failed to fetch location data");

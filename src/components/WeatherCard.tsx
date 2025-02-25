@@ -30,7 +30,7 @@ export const WeatherCard = ({ location, onWeatherUpdate }: WeatherCardProps) => 
       setLoading(true);
       try {
         const response = await fetch(
-          `https://api.weatherapi.com/v1/current.json?key=d64827ead6394124a69185103252402&q=${location.lat},${location.lng}&aqi=no`
+          `https://api.weatherapi.com/v1/current.json?key=${import.meta.env.VITE_WEATHER_API_KEY}&q=${location.lat},${location.lng}&aqi=no`
         );
 
         if (!response.ok) {

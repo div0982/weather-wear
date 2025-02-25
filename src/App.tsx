@@ -9,7 +9,7 @@ import NotFound from "./pages/NotFound";
 const App = () => (
   <AuthProvider>
     <Toaster />
-    <BrowserRouter basename="/weatherwear-avatar">
+    <BrowserRouter basename="/weather-wear">
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/analyzer" element={<Analyzer />} />

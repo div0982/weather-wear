@@ -69,7 +69,7 @@ Return ONLY a JSON object with this EXACT structure (no other text):
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'x-goog-api-key': 'AIzaSyC9tmA4T2NUf_Td5SVfVRycOhNxU5a7a14'
+            'x-goog-api-key': import.meta.env.VITE_GEMINI_API_KEY
           },
           body: JSON.stringify({
             contents: [{
